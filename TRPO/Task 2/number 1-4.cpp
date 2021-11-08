@@ -134,18 +134,11 @@ int main()
 	cout << "Какое задание вылнять будем, господин?" << endl; cin >> menu;
 	switch (menu)
 	{
-	case 1: Task1_2(); break;
-	case 2: Task1_2(); break;
-	case 4: Task3_4(); break;
-	case 3: Task3_4(); break;
-	default: cout << " я такого не знаю, я способен сделать с 1 по 4 :(" << endl;
+		case 1: Task1_2(); break;
+		case 2: Task1_2(); break;
+		case 4: Task3_4(); break;
+		case 3: Task3_4(); break;
+		default: cout << " я такого не знаю, я способен сделать с 1 по 4 :(" << endl;
 		
 	}
-	
-	
-
-	
-	
-	
-   
-	}
+}
