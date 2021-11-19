@@ -1,9 +1,9 @@
-#include "pch.h"
+ï»¿
 #include <iostream>
 #include "math.h"
 
-using namespace std;
 
+using namespace std;
 
 int NOD(int number_a, int number_b)
 {
@@ -19,17 +19,17 @@ int NOD(int number_a, int number_b)
 }
 
 
-int main()
+void rectangle()
 {
 	int x, z, k;
 	using namespace std;
 	setlocale(LC_ALL, "Russian");
-	cout << " Ââåäèòå âûñîòó ïðÿìîóãîëüíèêà ";   cin >> x;
-	cout << "Ââåäèòå øèðèíó ïðÿìîóãîëüíèêà ";    cin >> z;
-	cout << "Ïëîùàäü = " << x * z << endl;
-	
+	cout << " Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð²Ñ‹ÑÐ¾Ñ‚Ñƒ Ð¿Ñ€ÑÐ¼Ð¾ÑƒÐ³Ð¾Ð»ÑŒÐ½Ð¸ÐºÐ° ";   cin >> x;
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÑˆÐ¸Ñ€Ð¸Ð½Ñƒ Ð¿Ñ€ÑÐ¼Ð¾ÑƒÐ³Ð¾Ð»ÑŒÐ½Ð¸ÐºÐ° ";    cin >> z;
+	cout << "ÐŸÐ»Ð¾Ñ‰Ð°Ð´ÑŒ = " << x * z << endl;
+
 	int i = 0;
-	for (i; i < x; i++) 
+	for (i; i < x; i++)
 	{
 		for (k = 0; k < z; k++)
 		{
@@ -38,8 +38,19 @@ int main()
 		cout << endl;
 	}
 	system("pause");
-	long long  int n, c, q, w, e, g = 1;
-	cout << "Ââåäèòèòå êîëè÷åñâòî ÷èñåë ôèáîíà÷÷è - "; cin >> n;
+}
+
+void Factorial(long long& g, long long n, long long& e)
+{
+	for (g; g <= n; g++) {
+		e *= g;
+	}
+	cout << "Ñ„Ð°ÐºÑ‚Ð¾Ñ€Ð¸Ð°Ð» Ð¸Ð· ÑÑ‚Ð¾Ð³Ð¾ Ñ‡Ð¸ÑÐ»Ð° Ñ€Ð°Ð²ÐµÐ½ - " << e << endl;
+}
+
+void Fibonacci(long long& n, long long& q, long long& w, long long& e, long long& c)
+{
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ð¸Ñ‚Ðµ ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ Ñ‡Ð¸ÑÐµÐ» Ñ„Ð¸Ð±Ð¾Ð½Ð°Ñ‡Ñ‡Ð¸ - "; cin >> n;
 	q = 0;
 	w = 1;
 	cout << 1 << "  ";
@@ -52,44 +63,63 @@ int main()
 	}
 	cout << " ";
 	e = 1;
-	for (g; g <= n; g++) {
-		e *= g;
-	}
-	cout << "ôàêòîðèàë èç ýòîãî ÷èñëà ðàâåí - " << e << endl;
-	
+}
+
+void fibonacci_and_factorial()
+{
+	long long  int n, c, q, w, e, g = 1;
+	Fibonacci(n, q, w, e, c);
+	Factorial(g, n, e);
+
 	system("pause");
-	
+}
+
+
+void simple_or_not_and_NOD()
+{
 	int number_a, number_b, ii = 2, p = 2;
-	cout << "Ââåäèòå 2 ÷èñëà áîëüøå 0 " << endl; cout << "a= "; cin >> number_a; cout << "b= "; cin >> number_b;
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ 2 Ñ‡Ð¸ÑÐ»Ð° Ð±Ð¾Ð»ÑŒÑˆÐµ 0 " << endl; cout << "a= "; cin >> number_a; cout << "b= "; cin >> number_b;
 	while (number_a % ii == 0) {
 		ii++;
 	}
 	if (ii == number_a)
-		cout << "×èñëî à íå ïðîñòîå" << endl;
+		cout << "Ð§Ð¸ÑÐ»Ð¾ Ð° Ð½Ðµ Ð¿Ñ€Ð¾ÑÑ‚Ð¾Ðµ" << endl;
 	else
-		cout << "×èñëî à ïðîñòîå" << endl;
+		cout << "Ð§Ð¸ÑÐ»Ð¾ Ð° Ð¿Ñ€Ð¾ÑÑ‚Ð¾Ðµ" << endl;
 	ii = 0;
-	while (number_b % p == 0) 
+	while (number_b % p == 0)
 	{
 		p++;
 	}
 	if (ii == p)
-		cout << "×èñëî b íå ïðîñòîå " << endl;
+		cout << "Ð§Ð¸ÑÐ»Ð¾ b Ð½Ðµ Ð¿Ñ€Ð¾ÑÑ‚Ð¾Ðµ " << endl;
 	else
-		cout << "×èñëî b ïðîñòîå " << endl;
-	
-	
-	
-	cout<< "ÍÎÄ ÷èñëà ðàâåí - " << NOD(number_a, number_b);
-	system("pause");
+		cout << "Ð§Ð¸ÑÐ»Ð¾ b Ð¿Ñ€Ð¾ÑÑ‚Ð¾Ðµ " << endl;
 
+	cout << "ÐÐžÐ” Ñ‡Ð¸ÑÐ»Ð° Ñ€Ð°Ð²ÐµÐ½ - " << NOD(number_a, number_b);
+	system("pause");
+}
+
+void BinarySystem()
+{
 	int j, kk, l = 0;
-	cout << "Ââåäèòå ÷èñëî áîëüøå 0 "; cin >> j;
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾ Ð±Ð¾Ð»ÑŒÑˆÐµ 0 "; cin >> j;
 	for (kk = 0; j > 0; kk++) {
 		l += (j % 2) * pow(10, kk);
 		j /= 2;
 	}
-	cout << "Äâîè÷íàÿ ôîðìà ÷èñëà = " << l << endl;
+	cout << "Ð”Ð²Ð¾Ð¸Ñ‡Ð½Ð°Ñ Ñ„Ð¾Ñ€Ð¼Ð° Ñ‡Ð¸ÑÐ»Ð° = " << l << endl;
+}
+
+int main()
+{
+	rectangle();
+	fibonacci_and_factorial();
+	
+	simple_or_not_and_NOD();
+
+	BinarySystem();
+	
 	return 0;
 }
 
