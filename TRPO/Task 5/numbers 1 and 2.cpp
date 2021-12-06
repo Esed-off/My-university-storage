@@ -1,43 +1,34 @@
 ﻿#include <iostream>
 #include <sstream>  
 #include <string> 
-#include "ConsoleApplication4.h"
 
-/*
+using namespace std;
 
-
-
-    */
-void NumberToString(long double double_number)
+void NumberToString(double double_number)
 {
-    setlocale(LC_ALL, "Russian");
-    std::ostringstream ostr;
-    ostr << double_number;
-    std::string theNumberString = ostr.str(); // вот теперь эта переменная - строчная
-    std::cout << "теперь это строка - " << theNumberString;
+    
+    string s = to_string(double_number);
+    cout << "Результат - " << "'" << s << "'" << endl;
 }
-
 void NumberToString(int number)
 {
-    setlocale(LC_ALL, "Russian");
-    std::ostringstream ostr;
-    ostr << number;
-    std::string theNumberString = ostr.str(); // вот теперь эта переменная - строчная
-    std::cout << "теперь это строка - ";
-   
+    
+    string s = to_string(number);
+    cout << "Результат - " << "'" << s << "'" << endl;
 }
 
 int main()
 {
     setlocale(LC_ALL, "Russian");
     int menu;
-    std::cout << "какое у вас будет число? \n целочисленное - введите 1 \n с плавающей точкой - введите 2 \n"; std::cin >> menu;
-
+    std::cout << "какое у вас будет число? \n целочисленное - введите 1 \n дробное  - введите 2 \n"; std::cin >> menu;
+    double double_number = 0;
+    int number = 0;
     switch (menu)
     {
-    case 1: int number;  std::cout << "введите число - \n"; std::cin >> number; NumberToString(number); break;
-    case 2: long double double_number;  std::cout << "введите число с плавающей точкей - \n"; std::cin >> double_number; NumberToString(double_number);  break;
-    default: std::cout << "incorrect number ;("; break;
-
+    case 1: cout << "Введите число для конвертации в строку." << endl; cin >> number; NumberToString(number); break;
+    case 2: cout << "Введите дробное число для конвертации в строку." << endl; cin >> double_number; NumberToString(double_number);  break;
+    default: std::cout << "неверное число ;("; break;
     }
+    return main();
 }
